@@ -11,3 +11,9 @@ def get_route():
 @app_silence_detect.route("/silence/helloworld", methods=['GET'])
 def get_route():
 	return jsonify({"response":"Hello world"}, 200)
+
+
+
+if __name__ == "__main__":
+	app_silence_detect.run(host='0.0.0.0', port=9090, threaded=False)
+	#app.run(host='0.0.0.0')
